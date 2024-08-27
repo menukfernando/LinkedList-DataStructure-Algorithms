@@ -18,6 +18,7 @@ public class Main {
         ll.Insert(40);
         ll.Insert(50);
         ll.Insert(60);
+        ll.InsertAtStart(0);
         
         ll.Show();
     }

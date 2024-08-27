@@ -25,6 +25,12 @@ public class LinkedList {
         }
     }
     
+    public void InsertAtStart(int data){
+        Node newNode = new Node(data);
+        newNode.next = head;
+        head = newNode;
+    }
+    
     public void Show(){
         Node node = head;
         while(node.next!=null){
