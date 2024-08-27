@@ -31,6 +31,19 @@ public class LinkedList {
         head = newNode;
     }
     
+    public void InsertAt(int index, int data){
+        Node newNode = new Node(data);
+        Node currentNode = head;
+        if (index == 0) {
+            InsertAtStart(data);
+        }
+        for (int i = 0; i < index-1; i++) {
+            currentNode = currentNode.next;
+        }
+        newNode.next = currentNode.next;
+        currentNode.next = newNode;
+    }
+    
     public void Show(){
         Node node = head;
         while(node.next!=null){
