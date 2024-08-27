@@ -36,12 +36,28 @@ public class LinkedList {
         Node currentNode = head;
         if (index == 0) {
             InsertAtStart(data);
+        }else {
+            for (int i = 0; i < index-1; i++) {
+                currentNode = currentNode.next;
+            }
+            newNode.next = currentNode.next;
+            currentNode.next = newNode;
+        }       
+    }
+    
+    public void deleteAt(int index){
+        Node n1 = null;
+        if(index == 0){
+            head = head.next;
+        }else{
+            Node currentNode = head;
+            for (int i = 0; i < index - 1; i++) {
+                currentNode = currentNode.next;
+            }
+            n1 = currentNode.next;
+            currentNode.next = n1.next;
+            n1 = null;
         }
-        for (int i = 0; i < index-1; i++) {
-            currentNode = currentNode.next;
-        }
-        newNode.next = currentNode.next;
-        currentNode.next = newNode;
     }
     
     public void Show(){
