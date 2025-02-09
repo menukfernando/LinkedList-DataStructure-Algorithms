@@ -21,6 +21,9 @@ public class Main {
         ll.InsertAtStart(0);
         ll.InsertAt(4, 25);
         ll.deleteAt(1);
+
+        System.out.println("First Element: " + ll.getFirst());
+        System.out.println("Last Element: " + ll.getLast());
         
         ll.Show();
     }

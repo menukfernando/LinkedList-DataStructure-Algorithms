@@ -69,4 +69,24 @@ public class LinkedList {
         }
         System.out.println(node.data);
     }
+
+    public int getFirst() {
+        if (head == null) {
+            throw new RuntimeException("List is empty");
+        }
+        return head.data;
+    }
+
+    
+    public int getLast() {
+        if (head == null) {
+            throw new RuntimeException("List is empty");
+        }
+        Node currentNode = head;
+        while (currentNode.next != null) {
+            currentNode = currentNode.next;
+        }
+        return currentNode.data;
+    }
+    
 }
