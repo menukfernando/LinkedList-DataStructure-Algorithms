@@ -8,6 +8,7 @@
  *
  * @author Menuk Fernando
  */
+
 public class LinkedList {
     Node head;
     
