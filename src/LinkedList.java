@@ -77,7 +77,6 @@ public class LinkedList {
         return head.data;
     }
 
-    
     public int getLast() {
         if (head == null) {
             throw new RuntimeException("List is empty");
